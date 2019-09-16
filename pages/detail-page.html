@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Birth of Venus</title>
+</head>
+<body>
+    <main>
+        <section id="content">
+            <p>Yuki's Mobile Museum App</p>
+            <h1>Birth of Venus, Sandro Botticelli, 1485</h1>
+            <img src="https://images.uffizi.it/production/attachments/1503909239806647-605174-2-.jpg?ixlib=rails-2.1.3&w=1200&h=800&fit=clip&crop=center&fm=pjpg&auto=compress" alt="Birth of Venus">
+        </section>
+        <section id="comments">
+            <h2>Comments</h2>
+            <section class="comment">
+                <h3>The Guardian:</h3>
+                <p>"Botticelli's Birth of Venus breathes new life into an ancient religion"</p>
+            </section>
+        </section>
+        <form onsubmit="submitComment(); return false">
+            <div class="formSection">
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+            </div>
+            <div class="formSection">
+                <label for="msg">Message:</label>
+                <textarea id="msg"></textarea>
+            </div>
+            <div class="button">
+                <button type="default">Post your comment</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>Made with ❤ at Codaisseur</p>
+    </footer>
+</body>
+</html>
