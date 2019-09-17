@@ -1,0 +1,29 @@
+body {
+    background-color: #9eddf9;
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 2rem 0;
+    width : 100%;
+}
+main {
+    background: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 5px;
+    padding: 2rem 0;
+}
+h1 {
+    margin: 3rem 1rem 6rem 1rem;
+}
+.artObject {
+    max-width: 80%;
+    max-height: 20rem;
+    margin: 1rem;
+}
+#gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
