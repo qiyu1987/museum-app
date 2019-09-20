@@ -3,7 +3,7 @@ function submitComment() {
     const name = inputField.value
     const textarea = document.getElementById('msg')
     const msg = textarea.value
-    const commentsSection = document.getElementById('comments')
+    const commentSection = document.getElementById('comments')
     const comment = document.createElement('section')
     const h3 = document.createElement('h3')
     const p = document.createElement('p')
@@ -12,7 +12,13 @@ function submitComment() {
     comment.classList.add('comment')
     comment.appendChild(h3)
     comment.appendChild(p)
-    console.log(comment)
+    commentSection.appendChild(comment)
+    inputField.value = null
+    textarea.value = null
+
+    
+    console.log(commentSection)
+
 
 
     
