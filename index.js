@@ -323,19 +323,14 @@ const data = {
         }
     ]
 }
-// console.log(typeof(data))
-// console.log(data.artObjects.length)
-// console.log(typeof(data.countFacets))
-// console.log(typeof(data.artObjects[0].productionPlaces))
-// console.log(data.count)
-// console.log(data.countFacets.ondisplay)
-// console.log(data.artObjects[0].title)
-// console.log(data.artObjects[1].webImage.width)
+
 const painting = data.artObjects
 function displayPainting(painting) {
     
     const gallery = document.getElementById('gallery')
     for (let i = 0; i < painting.length; i++) {
+        
+        
         
         //     //<a href="./pages/detail-page.html">
         //   <img alt=_title_of_painting_ class="artObject" src=_url_of_web_image_ />
@@ -343,11 +338,30 @@ function displayPainting(painting) {
         const link = document.createElement('a')
         const img = document.createElement('img')
         const currentPainting = painting[i]
-        link.href = './pages/detail-page.html'
-        img.alt = painting[i].title
-        img.src = painting[i].webImage.url
-        link.appendChild(img)
-        gallery.appendChild(link)
+        // check 
+        const width = parseInt(currentPainting.webImage.width)
+        const author = currentPainting.principalOrFirstMaker
+        const year = parseInt(currentPainting.longTitle.match(/1[0-9]{3}/))
+        const IsByHonthorst = author.includes('Honthorst')
+        //check width author year
+        if (width > 1500 && !IsByHonthorst && year < 1800) {
+            link.href = './pages/detail-page.html'
+            img.alt = currentPainting.title
+            img.src = currentPainting.webImage.url
+            link.appendChild(img)
+            gallery.appendChild(link)
+            console.log(currentPainting)
+        }
+        
     }
 }
+// It should only display paintings with a width bigger than 1500.
+//painting.webImage.width > 1500
+// It should not display any paintings created by Honthorst.
+//painting.principalOrFirstMaker
+// It should only display paintings which are created before 1800.
+// function validToDisplay(painting) {
+//     painting
+    
+// }
 displayPainting(painting)
